@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class ="jumbotron text-center">
+    <h3>Bloguma Hoşgeldiniz</h3>
+    <p>Bu blogta geliştiriciler oalrak blog yazabilir ve isterseniz diğer geliştiricilerle paylaşabilirsiniz</p>
+</div>  
+
+<p>
+    {% if  request.user.is_authenticated %} 
+         Hoşgeldin {{request.user.username}}
+    {% else %}
+    {% endif %}
+</p>
+{% endblock body %}
